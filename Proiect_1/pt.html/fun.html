@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Fun </title>
+    <script src="fun.js"></script>
+</head>
+
+<body>
+
+    <form method="post">
+        <label>Nume: </label>
+        <input name="name" placeholder="Numele tău..." required/>
+        <br>
+        <label> Când ai venit ultima oară în Curtea de Argeș:</label>
+        <input type="date" name="data" required/>
+
+        <input type="submit" value="afla ">
+    </form>
+
+    <script>
+        window.onload = () => {
+            const dateInput = document.querySelector('input[name="data"]');
+            const today = new Date();
+            dateInput.max = today.toISOString().split('T')[0];
+        };
+    </script>
+
+</body>
+
+</html>
